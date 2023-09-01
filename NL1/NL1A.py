@@ -137,33 +137,21 @@ def calcular_amplitude_campo_magnetico(amplitude_campo_eletrico):
 
 #-----------------------------------------------------------------------------------------------------------------------
 
-# CONVERSOR DE METRO --> NANÔMETRO 
+# QUESTÃO 08 DA LISTA TESTE
 
-#Função para converter de metros para nanometros e vice-versa
-def converter_comprimento(valor, unidade_origem, unidade_destino):
-    if unidade_origem.lower() == 'metros' and unidade_destino.lower() == 'nanometros':
-        # 1 metro é igual a 1.000.000.000 nanômetros
-        resultado = valor * 1e9
-        return resultado
-    elif unidade_origem.lower() == 'nanometros' and unidade_destino.lower() == 'metros':
-        # 1 nanômetro é igual a 1e-9 metros
-        resultado = valor * 1e-9
-        return resultado
-    else:
-        return "Unidades de origem ou destino inválidas."
+# Função para calcular a amplitude do campo elétrico com o campo magnético (T)
+def calcular_amplitude_campo_eletricoT(amplitude_campo_magnetico):
+    c = 3.0e8  # Velocidade da luz no vácuo em m/s
+    amplitude_campo_magnetico_T = amplitude_campo_magnetico / 1e0 # Converter T para μT
+    amplitude_campo_eletrico = c * amplitude_campo_magnetico_T # Calcular a amplitude do campo elétrico em V/m
+    return amplitude_campo_eletrico
 
-#-----------------------------------------------------------------------------------------------------------------------
-
-# CONVERSOR DE WATT --> JOULE 
-
-#Função para converter de watt para joule e vice-versa
-def converter_energia(valor, unidade_origem, unidade_destino):
-    if unidade_origem == "W" and unidade_destino == "J":
-        return valor * 1  # 1 watt é igual a 1 joule por segundo
-    elif unidade_origem == "J" and unidade_destino == "W":
-        return valor * 1  # 1 joule por segundo é igual a 1 watt
-    else:
-        return None
+# Função para calcular a intensidade da onda com o campo magnético (T)
+def calcular_intensidade_onda_T(amplitude_campo_eletrico):
+    c = 3.0e8
+    epsilon_0 = 8.854e-12 # Permissividade elétrica do vácuo em F/m
+    intensidade_onda_uT = 0.5 * c * epsilon_0 * (amplitude_campo_eletrico**2) # Calcular a intensidade da onda em W/m²
+    return intensidade_onda_uT
 
 #-----------------------------------------------------------------------------------------------------------------------
 
@@ -177,8 +165,7 @@ def exibir_menu():
     print("5. Entrada com amplitude do campo magnético em [μT]")
     print("6. Entrada com amplitude do campo elétrico em [V/m]")
     print("7. Entrada com intensidade da onda em [W/m²]")
-    print("8. Conversor de metros (m) e nanometros (nm)")
-    print("9. Conversor de watt (w) e Joule (J)")
+    print("8. Entrada com amplitude do campo magnético em [T]")
     print("0. Sair\n")
 
 # Loop principal
@@ -245,26 +232,11 @@ while True:
         print(f"RESPOSTA: A amplitude do campo magnético é {amplitude_campo_magnetico:.3e} T") 
 
     elif escolha == "8":
-        valor = float(input("Digite o valor em metros: "))
-        resultado = converter_comprimento(valor, 'metros', 'nanometros')
-        print(f"{valor} metros é igual a {resultado} nanômetros.\n")
-        valor = float(input("Digite o valor em nanômetros: "))
-        resultado = converter_comprimento(valor, 'nanometros', 'metros')
-        print(f"{valor} nanômetros é igual a {resultado} metros.\n")
-
-    elif escolha == "9":
-        valor = float(input("Digite o valor em Watt (W): "))
-        resultado = converter_energia(valor, "W", "J")
-        if resultado is not None:
-            print(f"{valor} W é igual a {resultado} J.\n")
-        else:
-            print("Conversão não suportada.\n")
-        valor = float(input("Digite o valor em Joule (J): "))
-        resultado = converter_energia(valor, "J", "W")
-        if resultado is not None:
-            print(f"{valor} J é igual a {resultado} W.\n")
-        else:
-            print("Conversão não suportada.\n")
+        amplitude_campo_magnetico = float(input("Digite a amplitude do campo magnético em [T]: "))
+        amplitude_campo_eletrico = calcular_amplitude_campo_eletricoT(amplitude_campo_magnetico)
+        print(f"RESPOSTA: A amplitude do campo elétrico é {amplitude_campo_eletrico:.3e} V/m.")
+        intensidade_uT = calcular_intensidade_onda_T(amplitude_campo_eletrico)
+        print(f"RESPOSTA: A intensidade da onda é {intensidade_uT:.3e} W/m².\n")
 
     elif escolha == "0":
         print("Saindo do programa.")
