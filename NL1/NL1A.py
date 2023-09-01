@@ -120,7 +120,7 @@ def calcular_intensidade_onda_w(amplitude_campo_eletrico):
 # QUESTÃO 07 DA LISTA TESTE
 
 # Função para calcular a amplitude do campo elétrico (E0)
-def calcular_amplitude_campo_eletrico(intensidade_onda):
+def calcular_amplitude_campo_eletrico_E0(intensidade_onda):
     c = 3.0e8 # Velocidade da luz em m/s
     e0 = 8.854e-12 # Permitividade elétrica do vácuo em F/m
     amplitude_campo_eletrico = math.sqrt((2 * intensidade_onda) / (e0 * c))
@@ -236,7 +236,7 @@ while True:
 
     elif escolha == "7":
         intensidade_onda = float(input("Digite a intensidade da onda (I) em W/m²: "))
-        amplitude_campo_eletrico = calcular_amplitude_campo_eletrico(intensidade_onda)
+        amplitude_campo_eletrico = calcular_amplitude_campo_eletrico_E0(intensidade_onda)
         print(f"RESPOSTA: A amplitude do campo elétrico é {amplitude_campo_eletrico:.3e} V/m")
         amplitude_campo_magnetico = calcular_amplitude_campo_magnetico(amplitude_campo_eletrico)
         print(f"RESPOSTA: A amplitude do campo magnético é {amplitude_campo_magnetico:.3e} T") 
