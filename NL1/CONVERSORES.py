@@ -1,5 +1,3 @@
-#-----------------------------------------------------------------------------------------------------------------------
-
 # CONVERSOR DE METRO --> NANÔMETRO 
 
 #Função para converter de metros para nanometros e vice-versa
@@ -51,27 +49,24 @@ def conversor_magnetico(valor, unidade_origem, unidade_destino, unidade):
 
 #-----------------------------------------------------------------------------------------------------------------------
 
-
-
 def exibir_menu():
-    print("9. Conversor de Metros (m) e Nanometros (nm)")
-    print("10. Conversor de Watt (w) e Joule (J)")
-    print("11. Conversos de Tesla (T) para miliTesla (mT) e microTesla (µT)")
+    print("1. Conversor de Metros (m) e Nanometros (nm)")
+    print("2. Conversor de Watt (w) e Joule (J)")
+    print("3. Conversos de Tesla (T) para miliTesla (mT) e microTesla (µT)")
 
 while True:
     exibir_menu()
     escolha = input("Digite o número da opção desejada: ")
 
-    if escolha == "11":
-        valor = float(input("Digite o valor em Tesla (T): "))
-        resultado = conversor_magnetico(valor, 'T', 'mT', 'µT')
-        print(f"{valor} T é igual a {resultado} mT e {resultado} µT.\n")
-        resultado = conversor_magnetico(valor, 'mT', 'T', 'µT')
-        print(f"{valor} mT é igual a {resultado} T e {resultado} µT.\n")
-        resultado = conversor_magnetico(valor, 'µT', 'T', 'mT')
-        print(f"{valor} µT é igual a {resultado} T e {resultado} mT.\n")
+    if escolha == "1":
+        valor = float(input("Digite o valor em metros: "))
+        resultado = converter_comprimento(valor, 'metros', 'nanometros')
+        print(f"{valor} metros é igual a {resultado} nanômetros.\n")
+        valor = float(input("Digite o valor em nanômetros: "))
+        resultado = converter_comprimento(valor, 'nanometros', 'metros')
+        print(f"{valor} nanômetros é igual a {resultado} metros.\n")
     
-    elif escolha == "10":
+    elif escolha == "2":
         valor = float(input("Digite o valor em Watt (W): "))
         resultado = converter_energia(valor, "W", "J")
         if resultado is not None:
@@ -85,13 +80,15 @@ while True:
         else:
             print("Conversão não suportada.\n")
 
-    elif escolha == "9":
-        valor = float(input("Digite o valor em metros: "))
-        resultado = converter_comprimento(valor, 'metros', 'nanometros')
-        print(f"{valor} metros é igual a {resultado} nanômetros.\n")
-        valor = float(input("Digite o valor em nanômetros: "))
-        resultado = converter_comprimento(valor, 'nanometros', 'metros')
-        print(f"{valor} nanômetros é igual a {resultado} metros.\n")
+    elif escolha == "3":
+        valor = float(input("Digite o valor em Tesla (T): "))
+        resultado = conversor_magnetico(valor, 'T', 'mT', 'µT')
+        print(f"{valor} T é igual a {resultado} mT e {resultado} µT.\n")
+        resultado = conversor_magnetico(valor, 'mT', 'T', 'µT')
+        print(f"{valor} mT é igual a {resultado} T e {resultado} µT.\n")
+        resultado = conversor_magnetico(valor, 'µT', 'T', 'mT')
+        print(f"{valor} µT é igual a {resultado} T e {resultado} mT.\n")
+    
 
 
         
