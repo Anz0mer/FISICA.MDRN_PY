@@ -155,6 +155,10 @@ def calcular_intensidade_onda_T(amplitude_campo_eletrico):
 
 #-----------------------------------------------------------------------------------------------------------------------
 
+print("ANNA CAROLINA RIBEIRO PIRES ZOMER - 24.222.012-7")
+print("HUMBERTO DE OLIVEIRA PELLEGRINI - 24.123.065-5\n")
+print("Nosso código está descrito em mais ou menos 300 linhas,\naonde trabalhamos os conceitos de optica dentro da física moderna.\nNosso código faz cálculos físico-matemáticos para facilitar\nna hora de respondermos algumas questoes sobre optica.\nBasicamente estamos trabalhando os conceitos de amplitude, número, frequência angular e etc das ondas eletromagnéticas.\n")
+
 # Função para exibir o menu
 def exibir_menu():
     print("Escolha uma opção:")
