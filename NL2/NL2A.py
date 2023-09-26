@@ -1,36 +1,40 @@
-# Constante de Planck em [J·s]
-h = 6.626e-34
+from math import sqrt
 
-# Número quântico principal
-n = 9
+# Dados
+h = 4.136e-15
+planck = 6.626e-34
+velocidade = 2.187e6
+luz = 3e8
+m_eletron = 9.11e-31
+ry = 1.097e7
 
-# Raio da órbita [m]
-rn = n**2 * 5.29e-11
+# Exercício que te dá um valor fixo do nível do átomo de hidrogênio. 
+def fix():
 
-# Velocidade [m/s]
-vn = 2.187e6 / n
+    n = int(input("Qual o estado do átomo de hidrogênio? "))
 
-# Energia cinética [eV]
-Kn = 13.6 / n**2
+    raio_orbita = (n*n)*5.29e-11
+    raio_orbita_nm = raio_orbita*1e9
+    velocidade_eletron = velocidade/n
+    energia_cinetica = 13.6/(n*n)
+    energia_potencial = -27.2/(n*n)
+    energia_total = energia_cinetica*(-1)
+    comprimento_onda = planck/(m_eletron*velocidade_eletron)
+    comprimento_onda_nm = comprimento_onda*1e9
 
-# Energia potencial [eV]
-Un = -27.2 / n**2
+    print(f"O raio da órbita do elétron no átomo de hidrogênio no estado n={n} [Nm]: {raio_orbita_nm:.4e}")
+    print(f"A velocidade do elétron no átomo de hidrogênio no estado n={n} [M/s]: {velocidade_eletron:.4e}")
+    print(f"A energia cinética do elétron no átomo de hidrogênio no estado n ={n} [eV]: {energia_cinetica:.4e}")
+    print(f"A energia potencial do elétron no átomo de hidrogênio no estado n ={n} [eV]: {energia_potencial:.4e}")
+    print(f"A energia total do elétron no átomo de hidrogênio no estado n ={n} [eV]: {energia_total:.4e}")
+    print(f"o comprimento de onda de De Broglie do elétron no átomo de hidrogênio no nível n ={n} [Nm]: {comprimento_onda_nm:.4e}")
 
-# Energia total [eV]
-En = Kn + Un
+# Exercício que te dá um valor inicial e final do nível do átomo de hidrogênio.
+def in_fin()
 
-# Comprimento de onda de De Broglie [m]
-lambda_n = h / (9.109e-31 * vn)
+    n_in = int(input("Qual o estado inicial do átomo de hidrogênio? "))
+    n_fin = int(input("Qual o estado final do átomo de hidrogênio? "))
 
-# Converter para nanômetros (1 m = 1e9 nm)
-rn_nm = rn * 1e9
-vn_nm = vn * 1e9
-lambda_n_nm = lambda_n * 1e9
 
-# Exibir os resultados
-print(f"a) O raio da órbita do elétron no átomo de hidrogênio no estado n = 9: {rn_nm:.2f} nm")
-print(f"b) A velocidade do elétron no átomo de hidrogênio no estado n = 9: {vn_nm:.2f} m/s")
-print(f"c) A energia cinética do elétron no átomo de hidrogênio no estado n = 9: {Kn:.2f} eV")
-print(f"d) A energia potencial do elétron no átomo de hidrogênio no estado n = 9: {Un:.2f} eV")
-print(f"e) A energia total do elétron no átomo de hidrogênio no estado n = 9: {En:.2f} eV")
-print(f"f) O comprimento de onda de De Broglie do elétron no átomo de hidrogênio no nível n = 9: {lambda_n_nm:.2f} nm")
+fix()
+in_fin()
