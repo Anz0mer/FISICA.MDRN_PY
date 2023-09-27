@@ -1,5 +1,5 @@
 def emissao():
-    n_in = 4 
+    n_in = 2 
     n_fin = 1
 
     En1 = -13.6/n_in**2

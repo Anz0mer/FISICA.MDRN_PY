@@ -1,8 +1,11 @@
+#ANNA CAROLINA RIBEIRO PIRES ZOMER - 24.222.012-7
+#HUMBERTO DE OLIVEIRA PELLEGRINI - 24.123.065-5
+
 # Dados
 velocidade = 2.187e6
-h = 6.626e-34  # Constante de Planck em J·s
-c = 3.00e8     # Velocidade da luz no vácuo em m/s
-m_eletron = 9.11e-31  # Massa do elétron em kg
+h = 6.626e-34  # Planck (J·s)
+c = 3.00e8     # Velocidade da luz (m/s)
+m_eletron = 9.11e-31  # Massa do elétron (kg)
 
 
 # Função para calcular informações sobre um estado fixo do átomo de hidrogênio
@@ -26,19 +29,23 @@ def fix(n):
     print(f"--> A energia total do elétron no átomo de hidrogênio [eV]: {energia_total:.4e} eV")
     print(f"--> O comprimento de onda de De Broglie do elétron no átomo de hidrogênio [nm]: {comprimento_onda_nm:.4e} nm")
 
+#Calcula o Elétron absorvido com base no nível inicial e o nível final
 def absorvido(n_in, n_fin):
-    
+    # Calculos realizados para obter os resultados
     En1 = -13.6 / n_in ** 2
     En2 = -13.6 / n_fin ** 2
     Eabs = En2 - En1
 
+#Calcula o comprimento da onda do fóton com entrada em energia (eV)
 def calcular_comprimento_de_onda(energia_em_eV):
+    # Calculos realizados para obter os resultados
     energia_em_Joules = energia_em_eV * 1.602e-19
     comprimento_de_onda = h * c / energia_em_Joules
     return comprimento_de_onda
 
-
-def Frequencia_foton(comprimento):
+#Calcula a frequência do fóton com entrada de comprimento (m)
+def frequencia_foton(comprimento):
+    # Calculos realizados para obter os resultados
     frequencia = c / comprimento
     return frequencia
 
@@ -72,7 +79,7 @@ def menu():
 
         elif escolha == '4':
             comprimento = float(input("Digite o comprimento de onda em metros (m): "))
-            frequencia_hz = Frequencia_foton(comprimento)
+            frequencia_hz = frequencia_foton(comprimento)
             print(f"--> Frequência do fóton absorvido: {frequencia_hz:.4g} Hz")
             print('\n')
 
