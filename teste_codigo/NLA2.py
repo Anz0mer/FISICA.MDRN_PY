@@ -40,8 +40,9 @@ def menu():
     while True:
         print("\nMenu:")
         print("1. Calcular informações para um estado fixo do átomo de hidrogênio")
-        print("2. Calcular o comprimento de onda de um fóton")
-        print("3. Sair")
+        print("3. Calcular o comprimento de onda de um fóton")
+        print("4. Calcular a frequência de um fóton")
+        print("5. Sair")
         escolha = input("Escolha uma opção: ")
 
         if escolha == '1':
@@ -49,19 +50,19 @@ def menu():
             print("\n")
             fix(n)
         
-        elif escolha == '2':
+        elif escolha == '3':
             energia_em_eV = float(input("Digite a energia do fóton em elétrons-volt (eV): "))
             comprimento_de_onda_em_metros = calcular_comprimento_de_onda(energia_em_eV)
             print(f"--> Comprimento de onda do fóton: {comprimento_de_onda_em_metros:.2e} metros")
             print("\n")
 
-        elif escolha == '3':
+        elif escolha == '4':
             comprimento = float(input("Digite o comprimento de onda em metros (m): "))
             frequencia_hz = Frequencia_foton(comprimento)
             print(f"--> Frequência do fóton absorvido: {frequencia_hz:.4g} Hz")
             print('\n')
 
-        elif escolha == '4':
+        elif escolha == '5':
             break
         else:
             print("Opção inválida. Por favor, escolha novamente.")
