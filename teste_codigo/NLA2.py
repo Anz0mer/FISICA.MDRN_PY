@@ -26,6 +26,12 @@ def fix(n):
     print(f"--> A energia total do elétron no átomo de hidrogênio [eV]: {energia_total:.4e} eV")
     print(f"--> O comprimento de onda de De Broglie do elétron no átomo de hidrogênio [nm]: {comprimento_onda_nm:.4e} nm")
 
+def absorvido(n_in, n_fin):
+    
+    En1 = -13.6 / n_in ** 2
+    En2 = -13.6 / n_fin ** 2
+    Eabs = En2 - En1
+
 def calcular_comprimento_de_onda(energia_em_eV):
     energia_em_Joules = energia_em_eV * 1.602e-19
     comprimento_de_onda = h * c / energia_em_Joules
@@ -40,6 +46,7 @@ def menu():
     while True:
         print("\nMenu:")
         print("1. Calcular informações para um estado fixo do átomo de hidrogênio")
+        print("2. Calcular a energia absorvida de um fóton")
         print("3. Calcular o comprimento de onda de um fóton")
         print("4. Calcular a frequência de um fóton")
         print("5. Sair")
@@ -50,6 +57,13 @@ def menu():
             print("\n")
             fix(n)
         
+        elif escolha == '2':
+            n_in = int(input("Digite o valor de n_in: "))
+            n_fin = int(input("Digite o valor de n_fin: "))
+            abs = absorvido(n_in, n_fin)
+            print(f"--> Energia do fóton absorvido: {Eabs:.4g} eV")
+            print('\n')
+            
         elif escolha == '3':
             energia_em_eV = float(input("Digite a energia do fóton em elétrons-volt (eV): "))
             comprimento_de_onda_em_metros = calcular_comprimento_de_onda(energia_em_eV)
