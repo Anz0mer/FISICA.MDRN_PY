@@ -9,7 +9,7 @@ def calcular_transicao():
 
     if nivel == "1":
         valor_ni = int(input("Digite o valor para o nível inicial: "))
-        absorve_emite = input("O nível inicial absorve [1] ou emite [2]?: ")
+        absorve_emite = input("O nível inicial [1] ou emite [2]?: ")
         if absorve_emite == "1":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
             if opcao == "1":
@@ -21,7 +21,7 @@ def calcular_transicao():
                 nf = abs(13.6 / Efinal_ev)
                 nf_final = math.sqrt(nf)
 
-                nf_arredondado = round(nf_final)
+                nf_arredondado = round(nf_final,0)
 
                 print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado}.")
             elif opcao == "2":
@@ -34,7 +34,7 @@ def calcular_transicao():
                 nf = abs(13.6 / Efinal_ev)
                 nf_final = math.sqrt(nf)
 
-                nf_arredondado = round(nf_final)
+                nf_arredondado = round(nf_final,0)
 
                 print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado}.")
             else:
@@ -45,13 +45,15 @@ def calcular_transicao():
             if opcao == "1":
                 frequencia = float(input("Digite a frequência em Hz: "))
 
-                comprimento = c / frequencia
-                nf = abs(1 / (ry * (1/3**2 - 1/comprimento**2)))
-                nf_final = math.sqrt(nf)
-                
-                nf_inteiro = round(nf_final)
+                frequencia_hz = frequencia * 1e12
 
-                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_inteiro}.")
+                Efinal = (-13.6 / (valor_ni**2)) - (h*frequencia_hz)
+                Efinal1 = abs(-13.6/Efinal)
+                nf = math.sqrt(Efinal1)
+
+                nf_arredondado1 = round(nf,0)
+
+                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado1}.")
             
             elif opcao == "2":
                 comprimento = float(input("Digite o comprimento de onda em m: "))
