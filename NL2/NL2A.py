@@ -251,6 +251,10 @@ def calcular_transicao():
     else:
         print("Opção inválida. Por favor, digite '1' ou '2'.")
 
+print("ANNA CAROLINA RIBEIRO PIRES ZOMER - 24.222.012-7")
+print("HUMBERTO DE OLIVEIRA PELLEGRINI - 24.123.065-5\n")
+print("Nosso código está descrito em mais ou menos 300 linhas,\naonde trabalhamos os conceitos de óptica dentro da física moderna.\nNosso código faz cálculos físico-matemáticos para facilitar\nna hora de respondermos algumas questoes sobre óptica.\nBasicamente estamos trabalhando com cálculos para descobrimos alguns resultados sobre o átomo de hidrogênio e seus níveis.\n")
+
 # menu para chamar as funções
 def menu():
     while True:
