@@ -1,5 +1,5 @@
 c = 3.00e8
-comprimento = 1.22e-07
+comprimento = 1.03e-07
 
 def in_fin():
     frequencia = c / comprimento

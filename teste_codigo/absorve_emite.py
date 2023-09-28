@@ -7,104 +7,153 @@ ry = 1.097e7
 def calcular_transicao():
     nivel = input("Digite qual o nível que já possui, sendo inicial [1] ou final [2]: ")
 
+    #INICIAL
     if nivel == "1":
         valor_ni = int(input("Digite o valor para o nível inicial: "))
-        absorve_emite = input("O nível inicial [1] ou emite [2]?: ")
+        absorve_emite = input("O nível inicial absorve [1] ou emite [2]?: ")
+
+        #ABSORVE        
         if absorve_emite == "1":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
+            
+            #FREQUÊNCIA (certo)
             if opcao == "1":
-                frequencia = float(input("Digite a frequência em Hz: "))
+                frequencia_abs = float(input("Digite a frequência em THz: "))
 
-                Efoton = (h * frequencia)
-                Einicial = (-13.6 / valor_ni**2)
-                Efinal_ev = Einicial + (Efoton / 1.602e-19)
-                nf = abs(13.6 / Efinal_ev)
-                nf_final = math.sqrt(nf)
+                frequencia_hz = frequencia_abs * 1e12
 
-                nf_arredondado = round(nf_final,0)
+                Efinal = (-13.6 / (valor_ni**2)) + (h*frequencia_hz)
+                Efinal_freq = abs(-13.6/Efinal)
+                nf_freq = math.sqrt(Efinal_freq)
 
-                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado}.")
+                nf_arredondado_freq = round(nf_freq,0)
+
+                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_freq}.")
+            
+            #COMPRIMENTO (certo)
             elif opcao == "2":
-                comprimento = float(input("Digite o comprimento de onda em m: "))
+                comprimento_abs = float(input("Digite o comprimento de onda em nm: "))
 
-                Einicial = (-13.6 / valor_ni**2)
-                frequencia = c / comprimento
-                Efoton = h * frequencia
-                Efinal_ev = Einicial + (Efoton / 1.602e-19)
-                nf = abs(13.6 / Efinal_ev)
-                nf_final = math.sqrt(nf)
+                comprimento_m = comprimento_abs * 1e-9
 
-                nf_arredondado = round(nf_final,0)
+                Efinal = (-13.6 / (valor_ni**2)) + ((h * c) /comprimento_m)
+                Efinal_comp = abs(-13.6 / Efinal)
+                nf_comp = math.sqrt(Efinal_comp)
 
-                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado}.")
+                nf_arredondado_comp = round(nf_comp,0)
+
+                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_comp}.")
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
 
+        #EMITE
         elif absorve_emite == "2":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
+            
+            #FREQUÊNCIA (certo)
             if opcao == "1":
-                frequencia = float(input("Digite a frequência em Hz: "))
+                frequencia_emt = float(input("Digite a frequência em THz: "))
 
-                frequencia_hz = frequencia * 1e12
+                frequencia_hz = frequencia_emt * 1e12
 
                 Efinal = (-13.6 / (valor_ni**2)) - (h*frequencia_hz)
                 Efinal1 = abs(-13.6/Efinal)
-                nf = math.sqrt(Efinal1)
+                nf_freq1 = math.sqrt(Efinal1)
 
-                nf_arredondado1 = round(nf,0)
+                nf_arredondado_freq1 = round(nf_freq1,0)
 
-                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado1}.")
+                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_freq1}.")
             
+            #COMPRIMENTO (certo)
             elif opcao == "2":
-                comprimento = float(input("Digite o comprimento de onda em m: "))
-                print(f"O nível inicial com valor {valor_ni} emite no comprimento de onda {comprimento}.")
+                comprimento_emt = float(input("Digite o comprimento de onda em nm: "))
+
+                comprimento_m = comprimento_emt * 1e-9
+
+                Efinal = (-13.6 / (valor_ni**2)) - ((h * c) / comprimento_m)
+                Efinal_comp = abs(-13.6 / Efinal)
+                nf_comp = math.sqrt(Efinal_comp)
+
+                nf_arredondado_comp_emt = round(nf_comp,0)
+
+
+                print(f"O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_comp_emt}.")
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
         else:
             print("Opção inválida. Por favor, digite '1' (absorve) ou '2' (emite).")
 
+    #FINAL
     elif nivel == "2":
         valor_nf = float(input("Digite o valor para o nível final: "))
         absorve_emite = input("O nível final absorve [1] ou emite [2]?: ")
+        
+        #ABSORVE
         if absorve_emite == "1":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
-            if opcao == "1":
-                frequencia = float(input("Digite a frequência em Hz: "))
-
-                Efoton = (h * frequencia)
-                Efinal = (-13.6 / valor_nf**2)
-                Einicial_ev = Efinal + (Efoton / 1.602e-19)
-                ni = abs(13.6 / Einicial_ev)
-                ni_final = math.sqrt(ni)
-
-                ni_arredondado = round(ni_final)
-
-                print(f"O nível final com valor {valor_nf} tem como valor inicial n = {ni_arredondado}.") 
             
+            #FREQUÊNCIA (certo)
+            if opcao == "1":
+                frequencia_abs1 = float(input("Digite a frequência em THz: "))
+
+                frequencia_hz = frequencia_abs1 * 1e12
+
+                Efinal = (-13.6 / (valor_nf**2)) - (h*frequencia_hz)
+                Efinal_freq = abs(-13.6/Efinal)
+                nf_freq = math.sqrt(Efinal_freq)
+
+                nf_arredondado_freq = round(nf_freq,0)
+
+                print(f"O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_freq}.") 
+            
+            #COMPRIMENTO (certo)
             elif opcao == '2':    
-                comprimento = float(input("Digite o comprimento de onda em m: "))
-                
-                Efinal = (-13.6 / (valor_nf*valor_nf)) 
-                Efoton = h * c / comprimento
-                Einicial_ev = Efinal - (Efoton / 1.602e-19)
-                ni = abs(-13.6 / Einicial_ev)
-                ni_final = math.sqrt(ni)
+                comprimento_abs1 = float(input("Digite o comprimento de onda em nm: "))
 
-                ni_arredondado1 = round(ni_final)
+                comprimento_m = comprimento_abs1 * 1e-9
 
-                print(f"O nível final com valor {valor_nf} tem como valor inicial n = {ni_arredondado1}.")
+                Efinal = (-13.6 / (valor_nf**2)) - ((h * c) /comprimento_m)
+                Efinal_comp = abs(-13.6 / Efinal)
+                nf_comp = math.sqrt(Efinal_comp)
 
+                nf_arredondado_comp = round(nf_comp,0)
+
+                print(f"O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_comp}.")
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
         
+        #EMITE
         elif absorve_emite == "2":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
+            
+            #FREQUÊNCIA
             if opcao == "1":
-                frequencia = float(input("Digite a frequência em Hz: "))
-                print(f"O nível final com valor {valor_nf} emite na frequência {frequencia}.")
+                frequencia_emt1 = float(input("Digite a frequência em THz: "))
+
+                frequencia_hz = frequencia_emt1 * 1e12
+
+                Efinal = (-13.6 / (valor_nf**2)) + (h*frequencia_hz)
+                Efinal_freq = abs(-13.6/Efinal)
+                nf_freq = math.sqrt(Efinal_freq)
+
+                nf_arredondado_freq = round(nf_freq,0)
+
+                print(f"O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_freq}.") 
+            
+            #COMPRIMENTO
             elif opcao == "2":
-                comprimento = float(input("Digite o comprimento de onda em m: "))
-                print(f"O nível final com valor {valor_nf} emite no comprimento de onda {comprimento}.")
+                comprimento_emt1 = float(input("Digite o comprimento de onda em mm: "))
+                
+                comprimento_m = comprimento_emt1 * 1e-9
+
+                Efinal = (-13.6 / (valor_nf**2)) + ((h * c) /comprimento_m)
+                Efinal_comp = abs(-13.6 / Efinal)
+                nf_comp = math.sqrt(Efinal_comp)
+
+                nf_arredondado_comp = round(nf_comp,0)
+
+                print(f"O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_comp}.")
+                
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
         else:
