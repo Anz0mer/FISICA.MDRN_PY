@@ -5,10 +5,10 @@ import math
 
 # Dados
 velocidade = 2.187e6
-h1 = 6.626e-34  # Planck (J·s)
-c = 3.00e8     # Velocidade da luz (m/s)
-m_eletron = 9.11e-31  # Massa do elétron (kg)
+h1 = 6.626e-34
 h = 4.136e-15
+c = 3.00e8     
+m_eletron = 9.11e-31  
 ry = 1.097e7
 
 # Função para calcular informações sobre um estado fixo do átomo de hidrogênio
@@ -32,6 +32,7 @@ def fix(n):
     print(f"--> A energia total do elétron no átomo de hidrogênio [eV]: {energia_total:.4e} eV")
     print(f"--> O comprimento de onda de De Broglie do elétron no átomo de hidrogênio [nm]: {comprimento_onda_nm:.4e} nm")
 
+# Função para calcular informações sobre o átomo de hidrogênio em transição
 def calcular_propriedade(ni,nf):
 
     # Solicita à pessoa que escolha o que deseja calcular
@@ -91,6 +92,7 @@ def calcular_propriedade(ni,nf):
     else:
         print("Opção inválida. Por favor, escolha 1, 2 ou 3.")
 
+# Função para calcular o valor inicial ou final de 'n' com base na frequência ou comprimento.
 def calcular_transicao():
     nivel = input("Digite qual o nível que já possui, sendo inicial [1] ou final [2]: ")
 
@@ -103,7 +105,7 @@ def calcular_transicao():
         if absorve_emite == "1":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
             
-            #FREQUÊNCIA (certo)
+            #FREQUÊNCIA
             if opcao == "1":
                 frequencia_abs = float(input("Digite a frequência em THz: "))
 
@@ -117,7 +119,7 @@ def calcular_transicao():
 
                 print(f"--> O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_freq}.")
             
-            #COMPRIMENTO (certo)
+            #COMPRIMENTO
             elif opcao == "2":
                 comprimento_abs = float(input("Digite o comprimento de onda em nm: "))
 
@@ -137,7 +139,7 @@ def calcular_transicao():
         elif absorve_emite == "2":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
             
-            #FREQUÊNCIA (certo)
+            #FREQUÊNCIA
             if opcao == "1":
                 frequencia_emt = float(input("Digite a frequência em THz: "))
 
@@ -151,7 +153,7 @@ def calcular_transicao():
 
                 print(f"--> O nível inicial com valor {valor_ni} tem como valor final n = {nf_arredondado_freq1}.")
             
-            #COMPRIMENTO (certo)
+            #COMPRIMENTO
             elif opcao == "2":
                 comprimento_emt = float(input("Digite o comprimento de onda em nm: "))
 
@@ -179,7 +181,7 @@ def calcular_transicao():
         if absorve_emite == "1":
             opcao = input("Você deseja inserir a frequência [1] ou o comprimento de onda [2]? ")
             
-            #FREQUÊNCIA (certo)
+            #FREQUÊNCIA
             if opcao == "1":
                 frequencia_abs1 = float(input("Digite a frequência em THz: "))
 
@@ -193,7 +195,7 @@ def calcular_transicao():
 
                 print(f"--> O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_freq}.") 
             
-            #COMPRIMENTO (certo)
+            #COMPRIMENTO
             elif opcao == '2':    
                 comprimento_abs1 = float(input("Digite o comprimento de onda em nm: "))
 
@@ -249,6 +251,7 @@ def calcular_transicao():
     else:
         print("Opção inválida. Por favor, digite '1' ou '2'.")
 
+# menu para chamar as funções
 def menu():
     while True:
         print("\nMenu:")
