@@ -1,0 +1,63 @@
+MAIOR COMPRIMENTO DE LYMAN 
+--> 122 nm
+
+MENOR COMPRIMENTO DE LYMAN
+--> 91 nm
+
+MAIOR FREQUENCIA DE LYMAN
+--> 3.29E+15 Hz
+
+MENOR FREQUENCIA DE LYMAN 
+--> 2.47E+15 Hz
+
+================================================================================
+MAIOR COMPRIMENTO DE BALMER 
+--> 
+
+MENOR COMPRIMENTO DE BALMER
+--> 365 nm
+
+MAIOR FREQUENCIA DE BALMER 
+--> 8.23E+14 Hz
+
+MENOR FREQUENCIA DE BALMER
+--> 4.5694e14 Hz
+
+==========================================================
+MAIOR COMPRIMENTO DE PASCHEN
+--> 1880 nm
+
+MENOR COMPRIMENTO DE PASCHEN
+--> 821 nm
+
+MAIOR FREQUENCIA DE PASCHEN
+-->
+
+MENOR FREQUENCIA DE PASCHEN
+-->
+
+===================================================
+MAIOR COMPRIMENTO DE BRACKETT
+-->
+
+MENOR COMPRIMENTO DE BRACKETT
+--> 1459 nm
+
+MAIOR FREQUENCIA DE BRACKETT
+--> 2.06E+14 Hz
+
+MENOR FREQUENCIA DE BRACKETT
+--> 7.4225e13 Hz
+
+=============================================================
+MAIOR COMPRIMENTO DE PFUND
+--> 7460 nm
+
+MENOR COMPRIMENTO DE PFUND
+--> 2280 nm
+
+MAIOR FREQUENCIA DE PFUND
+--> 1.316e14 Hz
+
+MENOR FREQUENCIA DE PFUND
+--> 4.02e13 Hz

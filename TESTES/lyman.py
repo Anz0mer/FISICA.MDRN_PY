@@ -1,16 +1,16 @@
-# Constante de Rydberg para o hidrogênio em metros^-1
-Rydberg = 1.097e7
+# Definindo a constante de Rydberg para o hidrogênio
+R_H = 1.097373e7  # m^-1
 
-# Número quântico principal do nível inicial
-n_initial = 2
-
-# Número quântico principal do nível final (n = 1 para a série Lyman)
+# Definindo o número quântico principal do estado final (n = 1)
 n_final = 1
 
-# Calcula o comprimento de onda em metros
-wavelength = 1 / (Rydberg * (1 - 1/n_initial**2))
+# Definindo o número quântico principal do estado inicial (n = 2)
+n_inicial = 2
 
-# Calcula a frequência em hertz
-frequency = 3e8 / wavelength
+# Calculando o comprimento de onda usando a fórmula de Rydberg
+lambda_lyman = 1 / (R_H * (1 - 1/n_inicial**2))
 
-print(f'A maior frequência da série Lyman do átomo de hidrogênio é aproximadamente {frequency:.2e} Hz')
+lambda_lyman_nm = lambda_lyman * 1e9
+
+# Exibindo o resultado
+print(f"O maior comprimento de onda da série Lyman é aproximadamente {lambda_lyman_nm:.4e} nm")
