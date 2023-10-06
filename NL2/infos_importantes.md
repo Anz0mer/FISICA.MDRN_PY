@@ -11,6 +11,7 @@ MENOR FREQUENCIA DE LYMAN
 --> 2.47E+15 Hz
 
 =============================================================
+
 MAIOR COMPRIMENTO DE BALMER 
 --> 656 nm
 
@@ -24,6 +25,7 @@ MENOR FREQUENCIA DE BALMER
 --> 4.5694e14 Hz
 
 ==========================================================
+
 MAIOR COMPRIMENTO DE PASCHEN
 --> 1880 nm
 
@@ -37,6 +39,7 @@ MENOR FREQUENCIA DE PASCHEN
 -->
 
 ===================================================
+
 MAIOR COMPRIMENTO DE BRACKETT
 -->
 
@@ -50,6 +53,7 @@ MENOR FREQUENCIA DE BRACKETT
 --> 7.4225e13 Hz
 
 =============================================================
+
 MAIOR COMPRIMENTO DE PFUND
 --> 7460 nm
 
@@ -61,7 +65,9 @@ MAIOR FREQUENCIA DE PFUND
 
 MENOR FREQUENCIA DE PFUND
 --> 4.02e13 Hz
+
 ==============================================================
+
 SÉRIE DE LYMANN: nf = 1
 SÉRIE DE BALMER: nf = 2
 SÉRIE DE PASCHEN: nf = 3
@@ -69,12 +75,14 @@ SÉRIE DE BRACKETT: nf = 4
 SÉRIE DE PFUND: nf = 5
 
 ==============================================================
+
 ESTADO FUNDAMENTAL = 1
 n+1 ESTADO EXCITADO = n (EX. transição de n = 1 para o 16º estado excitado = 17)
 
 **** SE n FOR POR EXEMPLO = 6, O QUINTO ESTADO EXCITADO SE TORNA 7, POIS n=6 É "DESCONSIDERADO".
 
 ========================================================
+
 vn = 2.1883e6/n (vn substitui pela velocidade dada no enunciado) + (o valor de vn substituido vai por baix0)
 
 Kn = 13.6/ne2 (kn substitui pelo valor da energia cinética do enunciado) + (o valor de kn substituido vai por baixo)
