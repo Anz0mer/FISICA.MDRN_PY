@@ -79,8 +79,6 @@ SÉRIE DE PFUND: nf = 5
 ESTADO FUNDAMENTAL = 1
 n+1 ESTADO EXCITADO = n (EX. transição de n = 1 para o 16º estado excitado = 17)
 
-**** SE n FOR POR EXEMPLO = 6, O QUINTO ESTADO EXCITADO SE TORNA 7, POIS n=6 É "DESCONSIDERADO".
-
 ========================================================
 
 vn = 2.1883e6/n (vn substitui pela velocidade dada no enunciado) + (o valor de vn substituido vai por baix0)
