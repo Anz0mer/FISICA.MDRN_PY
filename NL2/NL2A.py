@@ -193,7 +193,7 @@ def calcular_transicao():
 
                 nf_arredondado_freq = round(nf_freq,0)
 
-                print(f"--> O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_freq}.") 
+                print(f"--> O nível final com valor {valor_nf} tem como valor inicial n = {nf_arredondado_freq}.") 
             
             #COMPRIMENTO
             elif opcao == '2':    
@@ -207,7 +207,7 @@ def calcular_transicao():
 
                 nf_arredondado_comp = round(nf_comp,0)
 
-                print(f"--> O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_comp}.")
+                print(f"--> O nível final com valor {valor_nf} tem como valor inicial n = {nf_arredondado_comp}.")
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
         
@@ -227,11 +227,11 @@ def calcular_transicao():
 
                 nf_arredondado_freq = round(nf_freq,0)
 
-                print(f"--> O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_freq}.") 
+                print(f"--> O nível final com valor {valor_nf} tem como valor inicial n = {nf_arredondado_freq}.") 
             
             #COMPRIMENTO
             elif opcao == "2":
-                comprimento_emt1 = float(input("Digite o comprimento de onda em mm: "))
+                comprimento_emt1 = float(input("Digite o comprimento de onda em nm: "))
                 
                 comprimento_m = comprimento_emt1 * 1e-9
 
@@ -241,7 +241,7 @@ def calcular_transicao():
 
                 nf_arredondado_comp = round(nf_comp,0)
 
-                print(f"--> O nível inicial com valor {valor_nf} tem como valor final n = {nf_arredondado_comp}.")
+                print(f"--> O nível final com valor {valor_nf} tem como valor inicial n = {nf_arredondado_comp}.")
                 
             else:
                 print("Opção inválida. Por favor, escolha '1' para frequência ou '2' para comprimento de onda.")
