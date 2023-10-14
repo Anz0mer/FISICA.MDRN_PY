@@ -131,40 +131,46 @@ def intensidade7():
     print(f"--> Intensidade da luz após ter atravessado o filtro polarizador: {Intensi_atrav:.3g} W/cm^2")
     print(f"--> Intensidade da luz não polarizada: {Intensi_naopola:.3g} W/cm^2")
 
+print("\nANNA CAROLINA RIBEIRO PIRES ZOMER - 24.222.012-7")
+print("HUMBERTO DE OLIVEIRA PELLEGRINI - 24.123.065-5\n")
+print("Nosso código está descrito em mais ou menos 200 linhas,\naonde trabalhamos os conceitos de óptica dentro da física moderna.\nNosso código faz cálculos físico-matemáticos para facilitar\nna hora de respondermos algumas questoes sobre óptica.\nBasicamente estamos trabalhando com cálculos para descobrimos alguns \nresultados sobre ângulo do eixo dos polarizadores, Intensidade da luz antes\ne depois de passar pelos polarizadores.\n")
 
-while True:
-    print(" ")
-    print("Escolha uma opção:")
-    print("1. Intensidade primeiro filtro e Intensidade conjunto")
-    print("2. Intensidade incidente e Intensidade conjunto")
-    print("3. Intensidade incidente e Intensidade primeiro polarizador")
-    print("4. Intensidade primeiro e segundo polarizador e Intensidade conjunto")
-    print("5. Intensidade incidente, Intensidade segundo polarizador e Intensidade conjunto")
-    print("6. Intensidade incidente, Intensidade primeiro polarizador e Intensidade conjunto")
-    print("7. Intensidade incidente, Intensidade primeiro polarizador e Intensidade segundo polarizador")
-    print("8. Intensidade atravessar filtro e Intensidade não polarizada")
-    print("9. Sair")
-    print(' ')
+def menu():
+    while True:
+        print(" ")
+        print("Escolha uma opção:")
+        print("1. Intensidade primeiro filtro e Intensidade conjunto")
+        print("2. Intensidade incidente e Intensidade conjunto")
+        print("3. Intensidade incidente e Intensidade primeiro polarizador")
+        print("4. Intensidade primeiro e segundo polarizador e Intensidade conjunto")
+        print("5. Intensidade incidente, Intensidade segundo polarizador e Intensidade conjunto")
+        print("6. Intensidade incidente, Intensidade primeiro polarizador e Intensidade conjunto")
+        print("7. Intensidade incidente, Intensidade primeiro polarizador e Intensidade segundo polarizador")
+        print("8. Intensidade atravessar filtro e Intensidade não polarizada")
+        print("9. Sair")
+        print(' ')
 
-    opcao = input("Digite o número da opção desejada: ")
+        opcao = input("Digite o número da opção desejada: ")
 
-    if opcao == "1":
-        intensidade()
-    elif opcao == "2":
-        intensidade1()
-    elif opcao == "3":
-        intensidade2()
-    elif opcao == "4":
-        intensidade3()
-    elif opcao == "5":
-        intensidade4()
-    elif opcao == "6":
-        intensidade5()
-    elif opcao == "7":
-        intensidade6()
-    elif opcao == "8":
-        intensidade7()
-    elif opcao == "9":
-        break
-    else:
-        print("Opção inválida. Tente novamente.")
+        if opcao == "1":
+            intensidade()
+        elif opcao == "2":
+            intensidade1()
+        elif opcao == "3":
+            intensidade2()
+        elif opcao == "4":
+            intensidade3()
+        elif opcao == "5":
+            intensidade4()
+        elif opcao == "6":
+            intensidade5()
+        elif opcao == "7":
+            intensidade6()
+        elif opcao == "8":
+            intensidade7()
+        elif opcao == "9":
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+menu()
