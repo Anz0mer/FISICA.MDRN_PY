@@ -13,8 +13,8 @@ def intensidade():
     Intensi_conj = Intensi_primeirofil * math.cos(segundofiltro_rad - theta_inicial)**2
 
     print(" ")
-    print(f"--> Intensidade da luz após ela ter atravessado o primeiro filtro: {Intensi_primeirofil:.3f} W/cm^2")
-    print(f"--> Intensidade da luz após ela ter atravessado o conjunto: {Intensi_conj:.3f} W/cm^2")
+    print(f"--> Intensidade da luz após ela ter atravessado o primeiro filtro: {Intensi_primeirofil:.3g} W/cm^2")
+    print(f"--> Intensidade da luz após ela ter atravessado o conjunto: {Intensi_conj:.3g} W/cm^2")
 
 def intensidade1():
     theta_inicial = 0
@@ -45,7 +45,6 @@ def intensidade2():
     print(f"--> Intensidade da luz após ela ter atravessado o primeiro polarizador: {Intensi_primeiropola:.3g} W/cm^2")
 
 def intensidade3():
-    theta_inicial = 0
 
     Intensi_npola = float(input("Digite o valor da intensidade [W/cm^2]: "))
     segundo_filtro = float(input("Digite o valor do ângulo do segundo filtro [graus]: "))
@@ -66,7 +65,6 @@ def intensidade3():
     print(f"--> Intensidade da luz depois de passar pelo conjunto: {Intensi_conj:.3g} W/cm^2")
 
 def intensidade4():
-    theta1_deg = 0
 
     Intensi_primeiropola = float(input("Digite o valor da intensidade após atravessar o primeiro polarizador [W/cm^2]: "))
     segundo_filtro = float(input("Digite o valor do ângulo do segundo filtro [graus]: "))
