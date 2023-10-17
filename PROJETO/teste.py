@@ -1,15 +1,22 @@
-def calcular_energias():
-    h = 6.626e-34
-    m = 9.109e-31
-    n3 = 3
-    L3 = 2.7500000000000003e-10
-    n6 = 6
-    L6 = 2.7500000000000003e-10
+import numpy as np
+from scipy.integrate import quad
 
-    E3 = n3**2 * h**2 / (8 * m * L3**2)
-    E6 = n6**2 * h**2 / (8 * m * L6**2)
+def wave_function(x, L, n):
+    return np.sqrt(2 / L) * np.sin(n * np.pi * x / L)
 
-    print(f'E3 = {E3:.2e} J = {E3 / 1.602e-19:.2f} eV')
-    print(f'E6 = {E6:.2e} J = {E6 / 1.602e-19:.2f} eV')
+def probability_density(x, L, n):
+    psi = wave_function(x, L, n)
+    return psi**2
 
-calcular_energias()
+def calcular_probabilidade():
+    L = float(input("Digite a largura do poço de potencial (L) em nm: "))
+    n = int(input("Digite o nível de energia (n): "))
+    x_min = float(input("Digite o valor de x_min em nm: "))
+    x_max = float(input("Digite o valor de x_max em nm: "))
+
+    probability, _ = quad(probability_density, x_min, x_max, args=(L, n))
+    probability_percent = probability * 100
+
+    print(f"A probabilidade de encontrar o elétron entre {x_min} nm e {x_max} nm no nível {n} é {probability_percent:.6f}%")
+
+calcular_probabilidade()
