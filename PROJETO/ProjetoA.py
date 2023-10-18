@@ -22,7 +22,7 @@ def calcular_energias():
     m = 9.109e-31
     n1 = float(input('Digite o valor de n1: '))
     n2 = float(input('Digite o valor de n2: '))
-    L = float(input("Digite o valor de L em metros: "))
+    L = float(input("Digite o valor de L em nm: "))
     L_m = L / 1e9
 
     En1 = n1**2 * h**2 / (8 * m * L_m**2)
@@ -89,7 +89,19 @@ def calcular_probabilidade():
     porcentagem = probabilidade * 100
 
     # Exiba o resultado da probabilidade
-    print(f"A probabilidade de encontrar o elétron entre {x_min} nm e {x_max} nm no nível {n} é {porcentagem:.6f}%")
+    print(f"--> A probabilidade de encontrar o elétron entre {x_min} nm e {x_max} nm no nível {n} é {porcentagem:.2f} %")
+
+
+def calcular_largura():
+    pi = 3.14
+    x = float(input("Digite o valor de √(2/L): "))
+    y = float(input("Digite o valor de (n·π/L):  "))
+
+    L = (2 / (x)**2) * 1e9
+    N = (y * (L / 1e9)) / pi
+
+    print(f"--> A largura do poço é: {L:.3g} nm") 
+    print(f"--> O número n do estado do elétron é: {N:.3g}")
 
 # Função para exibir o menu
 def menu():
@@ -119,6 +131,8 @@ def menu():
         elif escolha == "6":
             calcular_probabilidade()
         elif escolha == "7":
+            calcular_largura()
+        elif escolha == "11":
             print("Saindo do programa.")
             break
         else:
