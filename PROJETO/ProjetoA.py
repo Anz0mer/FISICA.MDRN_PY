@@ -103,6 +103,18 @@ def calcular_largura():
     print(f"--> A largura do poço é: {L:.3g} nm") 
     print(f"--> O número n do estado do elétron é: {N:.3g}")
 
+def probabilidade():
+    psi = (6.143E4)**2
+    x = float(input("Digite o valor de x: ")) 
+    A = float(input("Digite o valor de (n·π) : "))
+    B = float(input("Digite o valor de √(2/L): "))
+
+    # Cálculo da probabilidade
+    sin_squared = math.sin(2 * math.pi * A * x * B)**2
+    P = psi * sin_squared
+
+    print(f"--> A probabilidade de encontrar o elétron é: {P:.3g} dx")
+
 # Função para exibir o menu
 def menu():
     while True:
@@ -113,6 +125,7 @@ def menu():
         print("4. Calcular velocidade")
         print("5. Calcular comprimento de onda de De Broglie")
         print("6. Calcular probabilidade")
+        print("7. Calcular largura e número n do elétron")
         print("7. Sair")
 
         
@@ -132,6 +145,8 @@ def menu():
             calcular_probabilidade()
         elif escolha == "7":
             calcular_largura()
+        elif escolha == "8":
+            probabilidade()
         elif escolha == "11":
             print("Saindo do programa.")
             break
