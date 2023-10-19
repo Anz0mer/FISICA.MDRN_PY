@@ -1,22 +1,11 @@
-import numpy as np
-from scipy.integrate import quad
+from sympy import symbols, sin
 
-def wave_function(x, L, n):
-    return np.sqrt(2 / L) * np.sin(n * np.pi * x / L)
+x, L = symbols('x L')
+P_035L = (6.143E4)**2 * sin(35.57E9 * 0.35 * 0.53E-9 * x)**2
+result = P_035L.integrate((x, 0, 0.35 * L))
 
-def probability_density(x, L, n):
-    psi = wave_function(x, L, n)
-    return psi**2
+# Insira o valor de L aqui
+L_value = 0.53e-9
 
-def calcular_probabilidade():
-    L = float(input("Digite a largura do poço de potencial (L) em nm: "))
-    n = int(input("Digite o nível de energia (n): "))
-    x_min = float(input("Digite o valor de x_min em nm: "))
-    x_max = float(input("Digite o valor de x_max em nm: "))
-
-    probability, _ = quad(probability_density, x_min, x_max, args=(L, n))
-    probability_percent = probability * 100
-
-    print(f"A probabilidade de encontrar o elétron entre {x_min} nm e {x_max} nm no nível {n} é {probability_percent:.6f}%")
-
-calcular_probabilidade()
+result_evaluated = result.subs(L, L_value)
+print(f"P(0.35*L) = {result_evaluated}")
