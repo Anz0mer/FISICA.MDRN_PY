@@ -1,5 +1,7 @@
 import math
 
+
+#Calcular intensidade se o segundo filtro for remivido (filtro 2 = 0)
 def intensidade():
     theta_inicial = 0
 
@@ -118,6 +120,8 @@ def intensidade6():
     print(f"--> Intensidade da luz depois de passar pelo primeiro polarizador: {Intensi_primeiropola:.3g} W/cm^2")
     print(f"--> Intensidade da luz depois de passar pelo segundo polarizador: {Intensi_segundopola:.3g} W/cm^2")
 
+
+#Calcular I0 (coloque a primeira opção como 0 e a segunda com o valor de I1)
 def intensidade7():
     Intensi_npola = float(input("Digite o valor da intensidade não polarizada [W/cm^2]: "))
     Intensi_filtropola = float(input("Digite o valor da intesidade após um filtro polarizador [W/cm^2]: "))
