@@ -5,14 +5,14 @@
 import math
 
 # Ângulo em Graus
-Theta1_deg = 44.5
+Theta1_deg = 19
 
 # Converter para radianos
 Theta1_rad = math.radians(Theta1_deg)
 
 #Não esquecer de colocar a intensidade após 
 #passar pelo conjunto
-I0 = 32 * 2 / math.cos(Theta1_rad)**2
+I0 = 44.5 * 2 / math.cos(Theta1_rad)**2
 I1 = I0 / 2
 I2 = I0 / 2 * math.cos(2 * Theta1_rad)
 

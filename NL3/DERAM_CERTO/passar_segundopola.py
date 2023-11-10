@@ -3,13 +3,13 @@
 import math
 
 # Intensidade inicial da luz (I0)
-I0 = 40.0  # W/cm^2
+I0 = 75  # W/cm^2
 
 # Ângulo de polarização do primeiro filtro (θ1)
-theta1 = 22.0  # Graus
+theta1 = 29  # Graus
 
 # Ângulo de polarização do segundo filtro (θ2)
-theta2 = 55.0  # Graus
+theta2 = 57  # Graus
 
 # Calcular a intensidade após o primeiro filtro (I1) usando a lei da metade
 I1 = I0 / 2

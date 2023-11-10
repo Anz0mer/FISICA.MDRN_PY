@@ -1,16 +1,16 @@
 import math
 
 # Intensidade inicial da luz (I0)
-I0 = 1.0  # Vamos assumir I0 como 1 para calcular as intensidades relativas
+I0 = 540.0  # Vamos assumir I0 como 1 para calcular as intensidades relativas
 
 # Ângulo de polarização do primeiro filtro (θ1)
-theta1 = 0.0  # Graus
+theta1 = 7.6  # Graus
 
 # Ângulo de polarização do segundo filtro (θ2)
-theta2 = 60.0  # Graus
+theta2 = 25  # Graus
 
 # Ângulo de polarização do terceiro filtro (θ3)
-theta3 = 40.0  # Graus
+theta3 = 50  # Graus
 
 # Calcular a intensidade após o primeiro filtro (I1) usando a lei da metade
 I1 = I0 / 2

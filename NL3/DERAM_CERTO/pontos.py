@@ -3,13 +3,8 @@
 
 import math
 
-# Intensidade inicial da luz não polarizada (I0)
-I0 = 92  # W/cm^2
-
-# Ângulo de polarização do primeiro filtro (θ)
+I0 = 62  # W/cm^2
 theta1 = 60.0  # Graus
-
-# Ângulo de polarização do segundo filtro (90 - θ)
 theta2 = 90 - theta1  # Graus
 
 IA = I0 / 2
