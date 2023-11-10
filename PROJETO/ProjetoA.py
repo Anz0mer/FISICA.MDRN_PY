@@ -120,7 +120,7 @@ def calcular_largura():
     L = (2 / (x)**2) * 1e9
     N = (y * (L / 1e9)) / pi
 
-    print(f"--> A largura do poço é: {L:.3g} nm") 
+    print(f"--> A largura do poço é: {L} nm") 
     print(f"--> O número n do estado do elétron é: {N:.3g}")
 
 def probabilidade():
