@@ -1,13 +1,17 @@
+#CERTOOOOOOOOOO😍
+# Utilizar quando o exercício pedir a fração incidente
+#após atravessar o conjunto, com 3 direções de polarização
+
 import math
 
 # Ângulo de polarização do primeiro filtro (θ1)
-theta1 = 14.5  # Graus
+theta1 = 11.5  # Graus
 
 # Ângulo de polarização do segundo filtro (θ2)
-theta2 = 31.5  # Graus
+theta2 = 33.5  # Graus
 
 # Ângulo de polarização do terceiro filtro (θ3)
-theta3 = 77  # Graus
+theta3 = 54.5  # Graus
 
 # Intensidade inicial da luz não polarizada (I0)
 I0 = 1.0
@@ -28,4 +32,4 @@ frac_luz = I3 / I0
 print("Intensidade após o primeiro filtro (I1):", I1)
 print("Intensidade após o segundo filtro (I2):", I2)
 print("Intensidade após o terceiro filtro (I3):", I3)
-print("Fração de luz que atravessa o conjunto: {:.4f}".format(frac_luz))
+print("--> Fração de luz que atravessa o conjunto: {:.4f}".format(frac_luz))
