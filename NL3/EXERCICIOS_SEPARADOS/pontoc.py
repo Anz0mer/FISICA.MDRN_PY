@@ -1,7 +1,9 @@
+#CERTOOOOOOOOOOOOOOOOO 😍
+
 import math
 
 # Intensidade inicial da luz não polarizada (I0)
-I0 = 43.0  # W/cm^2
+I0 = 71  # W/cm^2
 
 # Ângulo de polarização do primeiro filtro (θ)
 theta1 = 60.0  # Graus
