@@ -4,8 +4,8 @@
 
 import math
 
-I1 = 37.5  # W/cm2
-theta_deg = 14  # degrees
+I1 = 29.5  # W/cm2
+theta_deg = 12  # degrees
 theta_rad = math.radians(theta_deg)
 
 I2 = I1 * math.cos(theta_rad)**2

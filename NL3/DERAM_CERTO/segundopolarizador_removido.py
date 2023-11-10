@@ -4,9 +4,9 @@
 
 import math
 
-theta2 = 26
-theta3 = 58
-I3 = 67.5
+theta2 = 22
+theta3 = 61
+I3 = 93
 
 I0 = (2 * I3) / (math.cos(math.radians(theta2)) ** 2 * math.cos(math.radians(theta3 - theta2)) ** 2)
 I1 = I0 / 2

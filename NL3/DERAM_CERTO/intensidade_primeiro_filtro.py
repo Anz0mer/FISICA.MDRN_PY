@@ -3,9 +3,9 @@
 import math
 
 # Dados fornecidos
-I1 = 30.5  # W/cm2
-theta_deg = 11  #theta 2
-theta_deg1 = 0 # theta 1
+I1 = 27  # W/cm2
+theta_deg = 84  #theta 2
+theta_deg1 = 67 # theta 1
 
 # Convertendo o ângulo para radianos
 theta_rad = math.radians(theta_deg)

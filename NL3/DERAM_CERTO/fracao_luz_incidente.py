@@ -4,14 +4,14 @@
 
 import math
 
-theta1 = 16.5 # Graus
-theta2 = 54  # Graus
-theta3 = 57.5  # Graus
+theta1 = 5.5 # Graus
+theta2 = 36.5  # Graus
+theta3 = 61  # Graus
 
 I0 = 1.0
 I1 = I0 / 2
 I2 = I1 * math.cos(math.radians(theta2 - theta1)) ** 2
-I3 = I2 * math.cos(math.radians(90 + theta3 - theta2)) ** 2
+I3 = I2 * math.cos(math.radians(theta3 - theta2)) ** 2
 frac_luz = I3 / I0
 
 print("Intensidade após o primeiro filtro (I1):", I1)

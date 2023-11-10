@@ -20,9 +20,9 @@ def intensidade_incidente(intensidade_conjunto, theta2, theta3):
     return I0
 
 # Valores fornecidos no problema
-intensidade_conjunto = 480  # W/m^2
-theta2 = 19  # Ângulo em graus
-theta3 = 75  # Ângulo em graus
+intensidade_conjunto = 240   # W/m^2
+theta2 = 11  # Ângulo em graus
+theta3 = 45  # Ângulo em graus
 
 I0 = intensidade_incidente(intensidade_conjunto, theta2, theta3)
 print(f"A intensidade da luz incidente é {I0:.3f} W/m^2")
