@@ -3,7 +3,7 @@
 
 import math
 
-I0 = 92  # W/cm^2
+I0 = 21  # W/cm^2
 theta1 = 60.0  # Graus
 theta2 = 90 - theta1  # Graus
 

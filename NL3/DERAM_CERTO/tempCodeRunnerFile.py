@@ -4,9 +4,9 @@
 import math
 
 # Dados do problema
-theta2_deg = 21
-theta3_deg = 56
-I3 = 40  # W/cm2
+theta2_deg = 5
+theta3_deg = 55
+I3 = 250  # W/cm2
 
 # Convertendo ângulos para radianos
 theta2_rad = math.radians(theta2_deg)
